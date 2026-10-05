@@ -1,15 +1,17 @@
 /* ==========================================================================
    main.js — wire every waitlist form on the page.
+   Redirects to thanks.html on successful submit.
    ========================================================================== */
 
 import { joinWaitlist } from './supabase.js';
+
+const THANKS_URL = '/thanks.html';
 
 document.querySelectorAll('[data-waitlist-form]').forEach((form) => {
   const source  = form.getAttribute('data-source') || 'unknown';
   const input   = form.querySelector('input[type="email"]');
   const button  = form.querySelector('button[type="submit"]');
   const message = form.querySelector('.form-message');
-  const success = form.parentElement.querySelector('.waitlist-success');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -29,24 +31,13 @@ document.querySelectorAll('[data-waitlist-form]').forEach((form) => {
 
     try {
       await joinWaitlist(input.value, source);
-
-      if (success) {
-        form.style.display = 'none';
-        success.classList.add('is-visible');
-      } else {
-        form.reset();
-        if (message) {
-          message.textContent = "You're on the list. We'll be in touch.";
-          message.className = 'form-message is-success';
-        }
-      }
+      window.location.href = `${THANKS_URL}?source=${encodeURIComponent(source)}`;
     } catch (err) {
       console.error('Waitlist failed:', err);
       if (message) {
         message.textContent = 'Something went wrong. Please try again.';
         message.className = 'form-message is-error';
       }
-    } finally {
       button.disabled = false;
       button.textContent = originalText;
     }

@@ -12,3 +12,6 @@
 
 /index.html
   Cache-Control: public, max-age=300
+
+/thanks.html
+  Cache-Control: public, max-age=300
