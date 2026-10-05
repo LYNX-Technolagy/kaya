@@ -1,0 +1,81 @@
+/* ==========================================================================
+   tokens.css — Kaya landing page design tokens.
+   Palette: ink / cream / rose.
+   Type: Cormorant Garamond · Inter · JetBrains Mono.
+   ========================================================================== */
+
+:root {
+
+  /* --- Colour ------------------------------------------------------------ */
+  --ink:        #1A1A1A;
+  --ink-soft:   #4A4A4A;
+  --ink-muted:  #8A8A8A;
+
+  --cream:      #FAF6F1;
+  --white:      #FFFFFF;
+  --line:       #E8E0D8;
+
+  --rose:       #B8847A;
+  --rose-dark:  #9A6A61;
+  --rose-soft:  #F3E8E5;
+
+  --error:      #B8514A;
+
+  /* --- Type -------------------------------------------------------------- */
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-hero:    clamp(2.5rem, 7vw, 4.5rem);
+  --fs-page:    clamp(2rem, 5vw, 3.25rem);
+  --fs-section: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-lead:    clamp(1rem, 1.8vw, 1.125rem);
+  --fs-body:    1rem;
+  --fs-sm:      0.9375rem;
+  --fs-eyebrow: 0.75rem;
+  --fs-meta:    0.6875rem;
+
+  --lh-tight: 1.1;
+  --lh-snug:  1.25;
+  --lh-body:  1.7;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  --ls-tight:   -0.015em;
+  --ls-normal:  0;
+  --ls-eyebrow: 0.14em;
+  --ls-mono:    0.12em;
+
+  /* --- Spacing ----------------------------------------------------------- */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  3rem;
+  --sp-8:  4rem;
+  --sp-9:  6rem;
+
+  --section-y: clamp(3.5rem, 9vw, 6.5rem);
+
+  /* --- Layout ------------------------------------------------------------ */
+  --max-w:       1216px;
+  --max-w-tight: 720px;
+  --gutter:      clamp(1.25rem, 3vw, 2rem);
+
+  /* --- Radii / borders --------------------------------------------------- */
+  --r-sm:   4px;
+  --r-md:   8px;
+  --r-lg:   12px;
+  --r-pill: 999px;
+
+  --b-hairline: 1px solid var(--line);
+
+  /* --- Motion ------------------------------------------------------------ */
+  --t-fast: 120ms ease;
+  --t-base: 220ms ease;
+}

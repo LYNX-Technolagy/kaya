@@ -1,0 +1,14 @@
+{
+  "name": "Kaya — Salon booking system",
+  "short_name": "Kaya",
+  "description": "Bookings, clients, and calendar in one place. For South African salons.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6F1",
+  "theme_color": "#FAF6F1",
+  "lang": "en-ZA",
+  "icons": [
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

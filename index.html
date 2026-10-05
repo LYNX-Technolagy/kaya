@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kaya — The booking site your salon actually deserves</title>
+  <meta name="description" content="Kaya brings your bookings, clients, and calendar into one quiet place. Built for South African salons. Join the waitlist for early access.">
+
+  <link rel="canonical" href="https://kaya-za.netlify.app/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#FAF6F1">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kaya-za.netlify.app/">
+  <meta property="og:title" content="Kaya — The booking site your salon actually deserves">
+  <meta property="og:description" content="Kaya brings your bookings, clients, and calendar into one quiet place. Built for South African salons.">
+  <meta property="og:image" content="https://kaya-za.netlify.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kaya — The booking site your salon actually deserves.">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:site_name" content="Kaya">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kaya — The booking site your salon actually deserves">
+  <meta name="twitter:description" content="Kaya brings your bookings, clients, and calendar into one quiet place. Built for South African salons.">
+  <meta name="twitter:image" content="https://kaya-za.netlify.app/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Kaya — The booking site your salon actually deserves.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ifwpchqbavzkhvhslbbh.supabase.co">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kaya",
+    "description": "A booking system for South African salons. Calendar, bookings, and clients in one place.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://kaya-za.netlify.app/",
+    "image": "https://kaya-za.netlify.app/img/og-image.png",
+    "inLanguage": "en-ZA",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Launch pricing",
+        "price": "299",
+        "priceCurrency": "ZAR",
+        "description": "Monthly subscription for the first 20 salons."
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard pricing",
+        "price": "499",
+        "priceCurrency": "ZAR",
+        "description": "Standard monthly subscription after launch."
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kaya",
+      "url": "https://kaya-za.netlify.app/",
+      "logo": "https://kaya-za.netlify.app/assets/img/icon-512.png"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">KAYA <span>·</span> <em>home</em></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#waitlist" class="btn btn-ghost" style="padding: 0.6rem 1.1rem; font-size: 0.875rem;">Join waitlist</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="eyebrow">For South African salons</p>
+          <h1 class="hero-title">
+            The booking site your salon <em>actually deserves.</em>
+          </h1>
+          <p class="hero-sub">Stop booking clients in your DMs.</p>
+
+          <form class="hero-form" data-waitlist-form data-source="hero" novalidate>
+            <div class="form-row">
+              <label class="visually-hidden" for="hero-email">Email</label>
+              <input class="form-input" id="hero-email" name="email" type="email" placeholder="you@yoursalon.co.za" required>
+              <button class="btn btn-primary" type="submit">Join the waitlist</button>
+            </div>
+            <p class="form-message" role="status"></p>
+            <p class="form-help">Early access, no card needed. We'll email you when it's ready.</p>
+          </form>
+
+          <div class="waitlist-success">
+            <h3>You're on the list.</h3>
+            <p>We'll be in touch soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust">
+      <div class="container trust-inner">
+        <span class="trust-item">Built for solo stylists</span>
+        <span class="trust-item">Small salons</span>
+        <span class="trust-item">2–5 chairs</span>
+        <span class="trust-item">Made in South Africa</span>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2 class="section-title">Running a salon is hard enough.</h2>
+          <p class="section-sub">You shouldn't need four apps, a spreadsheet, and a WhatsApp group just to keep track of who's coming in tomorrow.</p>
+        </div>
+
+        <div class="problem-grid">
+          <div class="card">
+            <p class="problem-num">[ 01 ]</p>
+            <h3 class="problem-title">Bookings live in your DMs.</h3>
+            <p class="problem-text">A message at 11pm, a follow-up at 7am, a "sorry, was that Tuesday?" in between. Nothing is written down anywhere.</p>
+          </div>
+          <div class="card">
+            <p class="problem-num">[ 02 ]</p>
+            <h3 class="problem-title">Double-bookings and gaps.</h3>
+            <p class="problem-text">A 90-minute colour squeezed into a 30-minute gap. Three clients who all thought they had the same 3pm.</p>
+          </div>
+          <div class="card">
+            <p class="problem-num">[ 03 ]</p>
+            <h3 class="problem-title">No-shows you can't see coming.</h3>
+            <p class="problem-text">You only find out when they don't arrive. No pattern, no history, no way to spot it earlier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">The product</p>
+          <h2 class="section-title">Everything, in one quiet place.</h2>
+          <p class="section-sub">A calendar you can actually read. A bookings list that makes sense. Clients with history. Nothing you don't need.</p>
+        </div>
+
+        <div class="shots-intro">
+          <div class="shots-meta">
+            <div class="shots-meta-item">See your whole week at a glance — every booking in its time slot.</div>
+            <div class="shots-meta-item">Click any booking to see who it is, what they're having, and any notes.</div>
+            <div class="shots-meta-item">Mark completed, cancelled, or no-show in one tap.</div>
+            <div class="shots-meta-item">Filter by day, week, service, or client.</div>
+            <div class="shots-meta-item">Your clients are saved — with their history, phone, and preferences.</div>
+          </div>
+          <div class="shot-frame">
+            <!-- Replace with: <img src="/assets/img/shot-calendar.png" alt="Kaya calendar view"> -->
+            <img src="/assets/img/calender.webp" alt="Kaya calendar view">
+            <div class="shot-caption">
+              <span>Calendar · Week view</span>
+              <span>08:00 – 19:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shots-grid">
+          <div class="shot-frame">
+            <!-- Replace with: <img src="/assets/img/shot-bookings.png" alt="Bookings list"> -->
+            <img src="/assets/img/bookings.webp" alt="Booking list">
+            <div class="shot-caption">
+              <span>Bookings · Filtered by week</span>
+              <span>Active only</span>
+            </div>
+          </div>
+
+          <div class="shots-col">
+            <div class="shot-frame">
+              <!-- Replace with: <img src="/assets/img/shot-detail.png" alt="Booking detail"> -->
+              <img src="/assets/img/client.webp" alt="Booking detail">
+              <div class="shot-caption">
+                <span>Client detail</span>
+                <span>Notes included</span>
+              </div>
+            </div>
+
+            <div class="shot-frame">
+              <!-- Replace with: <img src="/assets/img/shot-dashboard.png" alt="Dashboard"> -->
+              <img src="/assets/img/dashboard.webp" alt="Dashboard">
+              <div class="shot-caption">
+                <span>Dashboard</span>
+                <span>Today at a glance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What's inside</p>
+          <h2 class="section-title">Six things, done properly.</h2>
+          <p class="section-sub">No bloated feature list. Everything here is something a salon owner actually uses.</p>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 class="feature-title">A real calendar.</h3>
+            <p class="feature-text">Week and day views. Your hours, your services, your bookings in their actual time slots — not a list of times.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="feature-title">Slot-accurate booking.</h3>
+            <p class="feature-text">A 90-minute colour won't fit into a 30-minute gap. Kaya knows service durations, working hours, and buffers.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature-title">Client history.</h3>
+            <p class="feature-text">Every client, with their phone, their notes, and every booking they've made. No more "who was that, again?"</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h3 class="feature-title">One-tap status changes.</h3>
+            <p class="feature-text">Completed, cancelled, no-show. Marked in a tap, undoable for five seconds if you tap the wrong one.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <h3 class="feature-title">Blocks and time off.</h3>
+            <p class="feature-text">Lunch, training, a dentist appointment. Block any slot and clients can't book it. No more accidental 3pm doubles.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="feature-title">Set up in an afternoon.</h3>
+            <p class="feature-text">Add your services, set your hours, share the link. That's it. No training, no onboarding call, no manual.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Who it's for</p>
+          <h2 class="section-title">Built for the people doing the work.</h2>
+        </div>
+
+        <div class="for-who">
+          <div class="who-card">
+            <h3 class="who-title">Solo stylist</h3>
+            <ul class="who-list">
+              <li>Working from a home studio or rented chair</li>
+              <li>Booking clients yourself, mostly by WhatsApp</li>
+              <li>Wanting to look more professional without hiring anyone</li>
+            </ul>
+          </div>
+          <div class="who-card">
+            <h3 class="who-title">Small salon</h3>
+            <ul class="who-list">
+              <li>Two to five chairs</li>
+              <li>One or two stylists, one shared diary</li>
+              <li>Ready to stop juggling between three apps</li>
+            </ul>
+          </div>
+          <div class="who-card">
+            <h3 class="who-title">Growing studio</h3>
+            <ul class="who-list">
+              <li>Regulars every six weeks</li>
+              <li>A client list worth protecting</li>
+              <li>Ready for something that scales with you</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Pricing</p>
+          <h2 class="section-title">One price. No tiers.</h2>
+          <p class="section-sub">Every feature, every update. No "upgrade to unlock" games.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="price-card price-card--featured">
+            <p class="price-label">Launch pricing · first 20 salons</p>
+            <p class="price-amount">R299<small>/month</small></p>
+            <p class="price-note">Locked in for as long as you stay. Billed monthly, cancel anytime.</p>
+            <ul class="price-list">
+              <li>Your own booking site</li>
+              <li>Calendar, bookings, and clients</li>
+              <li>Unlimited services and bookings</li>
+              <li>WhatsApp booking link for clients</li>
+              <li>Every future update included</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-primary btn-block">Join the waitlist</a>
+          </div>
+
+          <div class="price-card">
+            <p class="price-label">Standard · after launch</p>
+            <p class="price-amount">R499<small>/month</small></p>
+            <p class="price-note">The regular price once the first 20 salons are onboarded.</p>
+            <ul class="price-list">
+              <li>Everything in launch pricing</li>
+              <li>Priority support</li>
+              <li>Free migration from your current system</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-ghost btn-block">Also join the waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">Questions, answered.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-q">Do I need my own domain?</summary>
+            <p class="faq-a">No. You get a free address to share — like <em>yoursalon.vercel.app</em>. If you already have a domain, we can point it at your Kaya page, but it's optional.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Do my clients need to install anything?</summary>
+            <p class="faq-a">No. They open the link, pick a service, pick a time, enter their name and number. No app, no account, no password.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">What happens to my client data?</summary>
+            <p class="faq-a">It's yours. You can export it at any time. If you leave Kaya, we don't hold it hostage — you get a full CSV of every client and every booking.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Can I try it before paying?</summary>
+            <p class="faq-a">Yes. Every salon that joins the waitlist gets a 30-day free trial once we open the doors. No card needed to start.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">When is it launching?</summary>
+            <p class="faq-a">We're onboarding the first 20 salons in the coming months. The waitlist is first-come, first-served. Join and we'll email you when it's your turn.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="waitlist">
+      <div class="container">
+        <h2>Ready when you are.</h2>
+        <p>Join the waitlist. We'll email you when Kaya opens — no spam, no card needed.</p>
+
+        <form class="final-cta-form" data-waitlist-form data-source="final-cta" novalidate>
+          <div class="form-row">
+            <label class="visually-hidden" for="final-email">Email</label>
+            <input class="form-input" id="final-email" name="email" type="email" placeholder="you@yoursalon.co.za" required>
+            <button class="btn btn-primary" type="submit">Join the waitlist</button>
+          </div>
+          <p class="form-message" role="status"></p>
+        </form>
+
+        <div class="waitlist-success">
+          <h3>You're on the list.</h3>
+          <p>We'll be in touch soon.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Kaya <span style="color: var(--rose);">·</span> <em>home</em></p>
+      <div class="footer-links">
+        <a href="mailto:hello@kaya.co.za">lynxtechza@gmail.com</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist">Waitlist</a>
+      </div>
+      <p>Made in South Africa</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
